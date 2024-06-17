@@ -16,6 +16,9 @@ return {
 
       local cmp = require("cmp")
 
+      -- Disable ghost text
+      opts.experimental.ghost_text = false
+
       opts.mapping = vim.tbl_extend("force", opts.mapping, {
         ["<Tab>"] = cmp.mapping(function(fallback)
           if cmp.visible() then
